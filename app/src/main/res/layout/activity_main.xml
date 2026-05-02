@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F4FB">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Control de Gastos"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#2D2438"
+            android:gravity="center"
+            android:layout_marginTop="80dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Administra tus gastos de forma sencilla"
+            android:textSize="15sp"
+            android:textColor="#6E6378"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="36dp" />
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Correo electrónico"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="16dp"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:paddingHorizontal="16dp"
+            android:background="@android:drawable/edit_text" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Iniciar sesión"
+            android:textAllCaps="false"
+            android:layout_marginTop="24dp" />
+
+        <Button
+            android:id="@+id/btnGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Continuar con Google"
+            android:textAllCaps="false"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/txtRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿No tienes cuenta? Regístrate"
+            android:textSize="14sp"
+            android:textColor="#6C4AB6"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:id="@+id/txtMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="14sp"
+            android:textColor="#B00020"
+            android:gravity="center"
+            android:layout_marginTop="18dp" />
+
+    </LinearLayout>
+</ScrollView>

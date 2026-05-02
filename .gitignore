@@ -1,0 +1,14 @@
+# Android
+.gradle/
+local.properties
+.idea/
+*.iml
+build/
+captures/
+
+# Firebase (IMPORTANTE)
+google-services.json
+
+# OS
+.DS_Store
+Thumbs.db
