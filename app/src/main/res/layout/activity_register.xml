@@ -66,14 +66,14 @@
             android:layout_marginTop="24dp" />
 
         <TextView
-            android:id="@+id/txtBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="← Volver al login"
-            android:textSize="14sp"
-            android:textColor="#6C4AB6"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp" />
+                android:id="@+id/txtBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="← Volver al login"
+                android:textSize="14sp"
+                android:textColor="#6C4AB6"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"/>
 
         <TextView
             android:id="@+id/txtMessage"
