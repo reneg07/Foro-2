@@ -32,7 +32,7 @@ class HistorialActivity : AppCompatActivity() {
 
     private val categorias = listOf(
         "Todas", "Alimentación", "Transporte", "Entretenimiento",
-        "Salud", "Educación", "Otros", "Deportes"
+        "Salud", "Educación", "Otros", "Deportes", "recibos"
     )
 
     private var filtroActual = "Todas"

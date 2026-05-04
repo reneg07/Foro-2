@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import java.text.DecimalFormat
 
 
-// archivo que contiene la estructura de cada item para que el historial la renderice
+// archivo que contiene la estructura de cada item para que el historial la renderize
 
 class GastoAdapter(private val gastos: List<Gasto>) :
     RecyclerView.Adapter<GastoAdapter.GastoViewHolder>() {

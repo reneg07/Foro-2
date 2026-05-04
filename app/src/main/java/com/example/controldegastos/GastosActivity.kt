@@ -28,7 +28,7 @@ class GastosActivity : AppCompatActivity() {
 
     private val categorias = listOf(
         "Alimentación", "Transporte", "Entretenimiento",
-        "Salud", "Educación", "Otros", "Deportes"
+        "Salud", "Educación", "Otros", "Deportes", "recibos"
     )
 
     private var fechaSeleccionada = ""
@@ -131,6 +131,13 @@ class GastosActivity : AppCompatActivity() {
             .add(gasto)
             .addOnSuccessListener {
                 Toast.makeText(this, "Gasto guardado", Toast.LENGTH_SHORT).show()
+                etNombreGasto.text?.clear()
+                etMontoGasto.text?.clear()
+                actvCategoria.text?.clear()
+                val calendar = Calendar.getInstance()
+                fechaSeleccionada = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(calendar.time)
+                etFechaGasto.setText(fechaSeleccionada)
+                btnGuardarGasto.isEnabled = true
                 finish()
             }
             .addOnFailureListener { e ->
