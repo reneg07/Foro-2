@@ -119,7 +119,7 @@ Firestore Database
 4. 📱 Conectar un dispositivo físico o emulador
 5. ▶️ Ejecutar el proyecto
 
-> 📁 El archivo `google-services.json` se encuentra en la carpeta `app/`
+> 📁 El archivo `google-services.json` debe colocarse en la carpeta `app/` antes de ejecutar el proyecto
 
 ---
 
@@ -148,7 +148,7 @@ Firestore Database
 
 ## 📌 Notas
 
-- 🔒 `google-services.json` se incluye en `app/`
+- 🔒 `google-services.json` debe colocarse en `app/` (no se incluye en el repositorio)
 - 🌐 Firestore requiere conexión a internet para guardar y consultar datos
 - 📱 La app es compatible con Android 7.0 (API 24) en adelante
 
