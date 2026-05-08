@@ -1,70 +1,161 @@
+<div align="center">
+
 # 💸 Control de Gastos
 
-Aplicación Android para registrar, consultar y resumir gastos personales con **Firebase Authentication** y **Firestore**.
+**Aplicación Android para el registro y control de gastos personales**
+
+*Firebase Authentication · Firestore · Material Design*
+
+---
+
+</div>
 
 ## ✨ Funcionalidades
 
-- 🔐 Inicio de sesión con correo y Google
-- 📝 Registro de usuarios
-- ➕ Registro de nuevos gastos
-- ☁️ Guardado en Firestore por usuario autenticado
-- 📚 Historial de gastos
-- 📊 Total mensual en pantalla principal
-- 🔎 Filtro por categoría
+| Icono | Funcionalidad | Descripción |
+|:-----:|:-------------|:------------|
+| 🔐 | Autenticación | Inicio de sesión con correo electrónico y Google |
+| 📝 | Registro | Creación de cuentas de usuario |
+| ➕ | Nuevo Gasto | Registro de gastos con nombre, monto, categoría y fecha |
+| ☁️ | Cloud Firestore | Almacenamiento en la nube asociado al usuario autenticado |
+| 📚 | Historial | Visualización de todos los gastos registrados |
+| 📊 | Total Mensual | Cálculo automático del total de gastos del mes actual |
+| 🔎 | Filtro por Categoría | Filtrado de gastos por categoría en el historial |
 
-## 🧰 Tecnologías
+---
 
-- Kotlin
-- Android SDK
-- Firebase Authentication
-- Firebase Firestore
-- Material Design
-- ConstraintLayout
-- RecyclerView
+## 🧰 Stack Tecnológico
 
-## 📱 Flujo de la app
+| Categoría | Tecnología |
+|:---------:|:----------:|
+| 💻 Lenguaje | **Kotlin** |
+| 📱 Plataforma | **Android SDK 34** |
+| 🔥 Backend | **Firebase Authentication** |
+| ☁️ Base de Datos | **Firebase Firestore** |
+| 🎨 Diseño | **Material Design 3** |
+| 📐 Layouts | **ConstraintLayout · LinearLayout** |
+| 📋 Listas | **RecyclerView** |
+| 🔧 Build | **Gradle 8.0 · AGP 8.1.1** |
 
-1. El usuario inicia sesión.
-2. Entra al Home.
-3. Desde ahí puede:
-   - crear un nuevo gasto
-   - ver el historial
-   - consultar el total mensual
-4. Los datos se guardan en Firestore bajo cada usuario.
+---
 
-## 🗂 Estructura principal
+## 📱 Flujo de la Aplicación
 
-- `MainActivity.kt` - Login
-- `RegisterActivity.kt` - Registro
-- `HomeActivity.kt` - Pantalla principal
-- `GastosActivity.kt` - Formulario de gasto
-- `HistorialActivity.kt` - Lista de gastos
-- `Gasto.kt` - Modelo de datos
-- `GastoAdapter.kt` - Adaptador de RecyclerView
+```
+ 🚀 App Abierta
+     │
+     ▼
+ 📱 MainActivity ──── Login con correo / Google
+     │                        │
+     │                   RegisterActivity
+     │                   (Registro de usuarios)
+     │
+     ▼ (Login exitoso)
+ 🏠 HomeActivity
+     │
+     ├── ➕ Nuevo Gasto ──→ GastosActivity ──→ ☁️ Firestore
+     │
+     ├── 📚 Historial ────→ HistorialActivity ← ☁️ Firestore
+     │
+     ├── 📊 Total Mensual (cálculo automático en Home)
+     │
+     └── 🚪 Cerrar sesión ──→ MainActivity
+```
+
+---
+
+## 🗂 Estructura del Proyecto
+
+```
+app/src/main/
+├── java/com/example/controldegastos/
+│   ├── 📄 MainActivity.kt ............. Pantalla de Login
+│   ├── 📄 RegisterActivity.kt ......... Pantalla de Registro
+│   ├── 🏠 HomeActivity.kt ............. Pantalla Principal
+│   ├── ➕ GastosActivity.kt ........... Formulario de Nuevo Gasto
+│   ├── 📚 HistorialActivity.kt ........ Historial de Gastos
+│   ├── 🗃 Gasto.kt .................... Modelo de Datos
+│   └── 🔌 GastoAdapter.kt ............ Adaptador RecyclerView
+│
+└── res/
+    ├── layout/
+    │   ├── activity_main.xml .......... Login
+    │   ├── activity_register.xml ...... Registro
+    │   ├── activity_home.xml .......... Home (total + botones)
+    │   ├── activity_gastos.xml ........ Formulario de gasto
+    │   ├── activity_historial.xml ..... Historial con filtros
+    │   └── item_gasto.xml ............. Fila de la lista
+    │
+    └── values/
+        ├── colors.xml
+        ├── strings.xml
+        └── themes.xml
+```
+
+---
+
+## ☁️ Estructura en Firestore
+
+```
+Firestore Database
+└── users/ (colección)
+    └── {uid}/ (documento por usuario)
+        └── gastos/ (subcolección)
+            └── {autoId}/
+                ├── nombre: "Supermercado"
+                ├── monto: 150.50
+                ├── categoria: "Alimentación"
+                ├── fecha: "2026-05-03"
+                └── fechaTimestamp: Timestamp
+```
+
+---
+
+## 🚀 Cómo Ejecutar
+
+1. 📥 Clonar el repositorio
+2. 📁 Colocar `google-services.json` en la carpeta `app/`
+3. 🔄 Sincronizar Gradle
+4. 📱 Conectar un dispositivo físico o emulador
+5. ▶️ Ejecutar el proyecto
+
+> 📁 El archivo `google-services.json` se encuentra en la carpeta `app/`
+
+---
+
+## 👥 Equipo de Desarrollo
+
+| Nombre | Carnet |
+|:------:|:------:|
+| Ronald Alexander Martínez Gutiérrez | MG223061 |
+| Katherine Paola Pineda Rodríguez | PR232427 |
+| René Francisco Guevara Alfaro | GA202826 |
+| Karina Lisbeth Angel Quezada | AQ161844 |
+
+---
 
 ## 📄 Documento PDF
 
-<!-- Adjuntar aquí el archivo PDF del informe -->
+> 📎 **[Adjuntar aquí el archivo PDF del informe]**
 
-## 🎥 Video de YouTube
+---
 
-<!-- Adjuntar aquí el enlace del video de presentación -->
+## 🎥 Video de Presentación
 
-## 🚀 Ejecución
+> 🔗 **[Adjuntar aquí el enlace del video de YouTube]**
 
-1. Abrir el proyecto en Android Studio o IntelliJ IDEA Ultimate.
-2. Agregar `google-services.json` dentro de la carpeta `app/`.
-3. Sincronizar Gradle.
-4. Ejecutar en un dispositivo físico o emulador.
-
-## 👥 Equipo
-
-- Integrante 1
-- Integrante 2
-- Integrante 3
-- Integrante 4
+---
 
 ## 📌 Notas
 
-- El archivo `google-services.json` no se sube al repositorio.
-- Firestore requiere conexión a internet para guardar y consultar datos.
+- 🔒 `google-services.json` se incluye en `app/`
+- 🌐 Firestore requiere conexión a internet para guardar y consultar datos
+- 📱 La app es compatible con Android 7.0 (API 24) en adelante
+
+---
+
+<div align="center">
+
+*Proyecto desarrollado para el Foro #2 — Control de Gastos*
+
+</div>
