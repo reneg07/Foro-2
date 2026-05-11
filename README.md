@@ -136,7 +136,10 @@ Firestore Database
 
 ## 📄 Documento PDF
 
-> 📎 [Foro_2_Final.pdf](https://github.com/user-attachments/files/27577735/Foro_2_Final.pdf)
+> 📎 https://files.catbox.moe/zy5s3r.pdf
+
+
+
 
 
 ---
