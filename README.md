@@ -136,7 +136,8 @@ Firestore Database
 
 ## 📄 Documento PDF
 
-> 📎 **[Adjuntar aquí el archivo PDF del informe]**
+> 📎 [Foro_2_Final.pdf](https://github.com/user-attachments/files/27577735/Foro_2_Final.pdf)
+
 
 ---
 
